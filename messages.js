@@ -1,3 +1,5 @@
+const image_vera = {};
+
 const welcomemsg = [
   {
     type: "divider",
