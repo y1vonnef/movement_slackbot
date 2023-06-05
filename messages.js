@@ -1,42 +1,42 @@
 const vera = {
   welcome:
-    "https://drive.google.com/file/d/12bYzm8ilYkNoltwJFNzJGs6fV0zc_0dz/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-%20Beginning%20%2B%20Morning.png?v=1685824097883",
   morning:
-    "https://drive.google.com/file/d/1oyCAkHZuQbW9rYlYK2rcMkB7ZDs7_61n/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-%20Good%20Morning.png?v=1685824695571",
   stretch:
-    "https://drive.google.com/file/d/1zhRxkRExvI1ZjWp_RnzcfJRsWXuTizkE/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-Reminder.png?v=1685824693600",
   snooze:
-    "https://drive.google.com/file/d/18kkjlW7JZLnqAvNtsnhA3-G9znSfCRZh/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-Snooze.png?v=1685824695233",
   skip1:
-    "https://drive.google.com/file/d/1sNt7t_XAJjTsqXxLECj-ZCnMoSoMdUXg/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-Skip.png?v=1685824694761",
   skip2:
-    "https://drive.google.com/file/d/1wuzBkpPOIgRM1EBDynqqS7ncMPmQG7cB/view?usp=drive_link",
-  eod: "https://drive.google.com/file/d/1AozOr5JAErfXudYCp7tm5w0Fq2RMXJ7X/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-Skip%20more%20than%202%20times.png?v=1685824694226",
+  eod: "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-EOD.png?v=1685824696026",
   complete:
-    "https://drive.google.com/file/d/1CWDfZFjw7d0Fl-M2NWU_HfZKLZ4ECTUG/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Vr-On%20completing%20stretch.png?v=1685824693112",
 };
 
 const zoya = {
   welcome:
-    "https://drive.google.com/file/d/15y0cCXnBaDxfQP-WsTzP0u7uJgc3POQK/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-%20Beginning%20%2B%20Morning.png?v=1685824096633",
   morning:
-    "https://drive.google.com/file/d/1CO_KJ7Dge26NXj12MnOB8Up05ZInK1mS/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-%20Good%20Morning.png?v=1685824681824",
   stretch:
-    "https://drive.google.com/file/d/1dmWJ0RojqcXqrEUtqieT2as6wXJXv0VS/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-Reminder.png?v=1685824684187",
   snooze:
-    "https://drive.google.com/file/d/17ggDygAxaZILzYRmTLF1RL2weJ90jq-S/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-Snooze.png?v=1685824681524",
   skip1:
-    "https://drive.google.com/file/d/1th0U31qsNnHOGqCIAHNL0p0vXoXGbljV/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-Skip.png?v=1685824680973",
   skip2:
-    "https://drive.google.com/file/d/19KX4aTt9mMsTVdbP_yhWzaoPqWtRBiAH/view?usp=drive_link",
-  eod: "https://drive.google.com/file/d/1IZl5706fWjt9KOdK7P9mNj0N76Mx0HrH/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-Skip%20more%20than%202%20times.png?v=1685824684793",
+  eod: "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-EOD.png?v=1685824682483",
   complete:
-    "https://drive.google.com/file/d/1ZQeNV6EuNXnPpDP4pLmwAXEsrH9t4Z-3/view?usp=drive_link",
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-On%20Completing%20stretch.png?v=1685824683328",
 };
 
 //initialize users
 //move this class code to messages.js
-class User {
+export class User {
   constructor(name, channel, imglist) {
     this.name = name;
     this.channel = channel;
@@ -53,7 +53,7 @@ class User {
         type: "image",
         title: {
           type: "plain_text",
-          text: "",
+          text: "Welcome!",
           emoji: true,
         },
         image_url: this.imglist.welcome,
@@ -99,7 +99,7 @@ class User {
         type: "image",
         title: {
           type: "plain_text",
-          text: "",
+          text: "Stretch Reminder!",
           emoji: true,
         },
         image_url: this.imglist.stretch,
@@ -135,7 +135,7 @@ class User {
             },
             style: "primary",
             value: "click_me_123",
-            action_id: "button_complete",
+            action_id: "button_complete" + this.name,
           },
           {
             type: "button",
@@ -145,7 +145,7 @@ class User {
               text: "Snooze",
             },
             value: "click_me_123",
-            action_id: "button_snooze",
+            action_id: "button_snooze" + this.name,
           },
           {
             type: "button",
@@ -156,7 +156,7 @@ class User {
             },
             style: "danger",
             value: "click_me_123",
-            action_id: "button_skip",
+            action_id: "button_skip" + this.name,
           },
         ],
       },
@@ -187,7 +187,7 @@ class User {
   }
 
   gen_skip2() {
-    [
+    return [
       {
         type: "image",
         title: {
@@ -260,7 +260,7 @@ class User {
         type: "image",
         title: {
           type: "plain_text",
-          text: "",
+          text: "End of Day!",
           emoji: true,
         },
         image_url: this.imglist.eod,
@@ -324,7 +324,7 @@ class User {
   }
 
   gen_morning() {
-    [
+    return [
       {
         type: "divider",
       },
@@ -332,7 +332,7 @@ class User {
         type: "image",
         title: {
           type: "plain_text",
-          text: "",
+          text: "Good Morning!",
           emoji: true,
         },
         image_url: this.imglist.morning,
@@ -363,12 +363,12 @@ class User {
   }
 
   gen_complete() {
-    [
+    return [
       {
         type: "image",
         title: {
           type: "plain_text",
-          text: "",
+          text: "Stretch Complete!",
           emoji: true,
         },
         image_url: this.imglist.complete,
@@ -396,7 +396,4 @@ class User {
   }
 }
 
-const user_vera = new User("Vera", "testuser1", vera);
-const user_zoya = new User("Zoya", "testuser2", zoya);
-
-export const user_group = [user_vera, user_zoya];
+export const user_imglist = { vera, zoya };
