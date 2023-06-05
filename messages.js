@@ -34,6 +34,78 @@ const zoya = {
     "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Zy-On%20Completing%20stretch.png?v=1685824683328",
 };
 
+const nicole = {
+  welcome:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-Beginning%20%2B%20Morning.png?v=1685939192830",
+  morning:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-%20Good%20Morning.png?v=1685939192346",
+  stretch:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-%20Reminder.png?v=1685939192584",
+  snooze:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-Snooze.png?v=1685939192151",
+  skip1:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-Skip.png?v=1685939193666",
+  skip2:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-Skip%20more%20than%202%20times.png?v=1685939193457",
+  eod: "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-EOD.png?v=1685939193072",
+  complete:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ni-On%20completing%20stretch.png?v=1685939193255",
+};
+
+const archana = {
+  welcome:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-beginning%20%2B%20Morning.png?v=1685938994169",
+  morning:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-%20Good%20Morning.png?v=1685938993276",
+  stretch:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-reminder.png?v=1685938994769",
+  snooze:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-snooze.png?v=1685938994954",
+  skip1:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-%20Skip.png?v=1685938993893",
+  skip2:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-%20Skip%20more%20than%202.png?v=1685938993669",
+  eod: "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-EOD.png?v=1685938994384",
+  complete:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ar-On%20completing%20stretch.png?v=1685938994596",
+};
+
+const jacob = {
+  welcome:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-%20Beginning%20%2B%20Morning.png?v=1685939124205",
+  morning:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-%20Good%20Morning.png?v=1685939124406",
+  stretch:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-Reminder.png?v=1685939125357",
+  snooze:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-%20Snooze.png?v=1685939124822",
+  skip1:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-Skip.png?v=1685939125552",
+  skip2:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-%20Skip%20more%20than%202.png?v=1685939124632",
+  eod: "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-EOD.png?v=1685939124996",
+  complete:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Jb-On%20Completing%20Stretch.png?v=1685939125180",
+};
+
+const meeku = {
+  welcome:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Meeku%20begin.png?v=1685939447286",
+  morning:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/MK%20-%20Good%20Morning.png?v=1685939447977",
+  stretch:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/MK-Remind.png?v=1685939446651",
+  snooze:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Meeku%20Snooze.png?v=1685939447486",
+  skip1:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/MK-Skip.png?v=1685939446844",
+  skip2:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/MK-morethan2.png?v=1685939446475",
+  eod: "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/MK-EOD.png?v=1685939446253",
+  complete:
+    "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Property%201%3DMissionCompleted%20Miku.png?v=1685939447088",
+};
+
 //initialize users
 //move this class code to messages.js
 export class User {
@@ -113,16 +185,21 @@ export class User {
           emoji: true,
         },
       },
+
       {
-        type: "context",
-        elements: [
-          {
-            type: "plain_text",
-            text: "Give your neck the care it deserves with our rejuvenating 2-minute stretch session!",
-            emoji: true,
-          },
-        ],
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: "Give your neck the care it deserves with our rejuvenating 2-minute stretch session!",
+        },
+        accessory: {
+          type: "image",
+          image_url:
+            "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ear-to-shoulder.gif?v=1685969202738",
+          alt_text: "alt text for image",
+        },
       },
+
       {
         type: "actions",
         elements: [
@@ -396,4 +473,4 @@ export class User {
   }
 }
 
-export const user_imglist = { vera, zoya };
+export const user_imglist = { vera, zoya, nicole, archana, jacob, meeku };

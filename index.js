@@ -17,16 +17,44 @@ const app = new App({
 })();
 
 const currentTime = new Date().getTime();
-const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000);
-const time2 = Math.floor((currentTime + 1 * 60 * 1000) / 1000);
-const time3 = Math.floor((currentTime + 1.5 * 60 * 1000) / 1000);
-const time4 = Math.floor((currentTime + 2 * 60 * 1000) / 1000);
-const time5 = Math.floor((currentTime + 2.5 * 60 * 1000) / 1000);
+// const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000);
+// const time2 = Math.floor((currentTime + 1 * 60 * 1000) / 1000);
+// const time3 = Math.floor((currentTime + 1.5 * 60 * 1000) / 1000);
+// const time4 = Math.floor((currentTime + 2 * 60 * 1000) / 1000);
+// const time5 = Math.floor((currentTime + 2.5 * 60 * 1000) / 1000);
+const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000); //welcome  11:30AM
+const time2 = Math.floor((currentTime + 1 * 60 * 60 * 1000) / 1000); //1st stretch 12:30PM
+const time3 = Math.floor((currentTime + 3 * 60 * 60 * 1000) / 1000); //2nd stretch 2:30PM
+const time4 = Math.floor((currentTime + 5 * 60 * 60 * 1000) / 1000); //3rd stretch 4PM
+const time5 = Math.floor((currentTime + 6.5 * 60 * 60 * 1000) / 1000); //eod 6PM
 
 const user_vera = new User("vera", "testuser1", user_imglist.vera);
 const user_zoya = new User("zoya", "testuser2", user_imglist.zoya);
+const user_nicole = new User("nicole", "testuser3", user_imglist.nicole);
+const user_archana = new User("archana", "testuser4", user_imglist.archana);
+const user_jacob = new User("jacob", "testuser5", user_imglist.jacob);
+const user_a = new User("usera", "testuser6", user_imglist.meeku);
+const user_b = new User("userb", "testuser7", user_imglist.meeku);
+const user_c = new User("userc", "testuser8", user_imglist.meeku);
+const user_d = new User("userd", "testuser9", user_imglist.meeku);
+const user_e = new User("usere", "testuser10a", user_imglist.meeku);
+const user_f = new User("userf", "testuser11", user_imglist.meeku);
 
-const user_group = [user_vera, user_zoya];
+const user_group = [
+  user_vera,
+  user_zoya,
+  user_nicole,
+  user_archana,
+  user_jacob,
+  user_a,
+  user_b,
+  user_c,
+  user_d,
+  user_e,
+  user_f,
+];
+
+//const user_group = [user_f];
 
 //define some functions
 //conditional based on action_id
@@ -130,5 +158,158 @@ app.action("button_snoozezoya", async ({ action, ack }) => {
 app.action("button_skipzoya", async ({ action, ack }) => {
   await ack();
   await respond_msg(user_zoya, "button_skip");
+});
+
+//nicole
+app.action("button_completenicole", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_nicole, "button_complete");
+});
+
+app.action("button_snoozenicole", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_nicole, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipnicole", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_nicole, "button_skip");
+});
+
+//archana
+app.action("button_completearchana", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_archana, "button_complete");
+});
+
+app.action("button_snoozearchana", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_archana, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skiparchana", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_archana, "button_skip");
+});
+
+//jacob
+app.action("button_completejacob", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_jacob, "button_complete");
+});
+
+app.action("button_snoozejacob", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_jacob, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipjacob", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_jacob, "button_skip");
+});
+
+//usera
+app.action("button_completeusera", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_a, "button_complete");
+});
+
+app.action("button_snoozeusera", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_a, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipusera", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_a, "button_skip");
+});
+
+//userb
+app.action("button_completeuserb", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_b, "button_complete");
+});
+
+app.action("button_snoozeuserb", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_b, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipuserb", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_b, "button_skip");
+});
+
+//userc
+app.action("button_completeuserc", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_c, "button_complete");
+});
+
+app.action("button_snoozeuserc", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_c, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipuserc", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_c, "button_skip");
+});
+
+//userd
+app.action("button_completeuserd", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_d, "button_complete");
+});
+
+app.action("button_snoozeuserd", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_d, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipuserd", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_d, "button_skip");
+});
+
+//usere
+app.action("button_completeusere", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_e, "button_complete");
+});
+
+app.action("button_snoozeusere", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_e, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipusere", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_e, "button_skip");
+});
+
+//userf
+app.action("button_completeuserf", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_f, "button_complete");
+});
+
+app.action("button_snoozeuserf", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_f, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipuserf", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_f, "button_skip");
 });
 //Bot can automatically join public channels, but we need to manually invite it to a private channel
