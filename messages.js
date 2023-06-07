@@ -165,7 +165,7 @@ export class User {
     ];
   }
 
-  gen_stretch() {
+  gen_stretch1() {
     return [
       {
         type: "image",
@@ -174,8 +174,9 @@ export class User {
           text: "Stretch Reminder!",
           emoji: true,
         },
-        image_url: this.imglist.stretch,
-        alt_text: "avatar",
+        image_url:
+          "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Chair%20rotation.webp?v=1685969202476",
+        alt_text: "stretch",
       },
       {
         type: "header",
@@ -194,9 +195,158 @@ export class User {
         },
         accessory: {
           type: "image",
-          image_url:
-            "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ear-to-shoulder.gif?v=1685969202738",
-          alt_text: "alt text for image",
+          image_url: this.imglist.stretch,
+          alt_text: "avatar",
+        },
+      },
+
+      {
+        type: "actions",
+        elements: [
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Work out now",
+            },
+            style: "primary",
+            value: "click_me_123",
+            action_id: "button_complete" + this.name,
+          },
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Snooze",
+            },
+            value: "click_me_123",
+            action_id: "button_snooze" + this.name,
+          },
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Skip",
+            },
+            style: "danger",
+            value: "click_me_123",
+            action_id: "button_skip" + this.name,
+          },
+        ],
+      },
+    ];
+  }
+
+  gen_stretch2() {
+    return [
+      {
+        type: "image",
+        title: {
+          type: "plain_text",
+          text: "Stretch Reminder!",
+          emoji: true,
+        },
+        image_url:
+          "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Ear-to-shoulder.gif?v=1685969202738",
+        alt_text: "stretch",
+      },
+      {
+        type: "header",
+        text: {
+          type: "plain_text",
+          text: "2 min stretch message!",
+          emoji: true,
+        },
+      },
+
+      {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: "Give your neck the care it deserves with our rejuvenating 2-minute stretch session!",
+        },
+        accessory: {
+          type: "image",
+          image_url: this.imglist.stretch,
+          alt_text: "avatar",
+        },
+      },
+
+      {
+        type: "actions",
+        elements: [
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Work out now",
+            },
+            style: "primary",
+            value: "click_me_123",
+            action_id: "button_complete" + this.name,
+          },
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Snooze",
+            },
+            value: "click_me_123",
+            action_id: "button_snooze" + this.name,
+          },
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Skip",
+            },
+            style: "danger",
+            value: "click_me_123",
+            action_id: "button_skip" + this.name,
+          },
+        ],
+      },
+    ];
+  }
+
+  gen_stretch3() {
+    return [
+      {
+        type: "image",
+        title: {
+          type: "plain_text",
+          text: "Stretch Reminder!",
+          emoji: true,
+        },
+        image_url:
+          "https://cdn.glitch.global/a8aeaf2d-c691-48c6-bc27-dca922a68fa3/Neck%20roll.webp?v=1685969202978",
+        alt_text: "stretch",
+      },
+      {
+        type: "header",
+        text: {
+          type: "plain_text",
+          text: "2 min stretch message!",
+          emoji: true,
+        },
+      },
+
+      {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: "Give your neck the care it deserves with our rejuvenating 2-minute stretch session!",
+        },
+        accessory: {
+          type: "image",
+          image_url: this.imglist.stretch,
+          alt_text: "avatar",
         },
       },
 

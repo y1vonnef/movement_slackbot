@@ -22,11 +22,11 @@ const currentTime = new Date().getTime();
 // const time3 = Math.floor((currentTime + 1.5 * 60 * 1000) / 1000);
 // const time4 = Math.floor((currentTime + 2 * 60 * 1000) / 1000);
 // const time5 = Math.floor((currentTime + 2.5 * 60 * 1000) / 1000);
-const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000); //welcome  11:30AM
-const time2 = Math.floor((currentTime + 1 * 60 * 60 * 1000) / 1000); //1st stretch 12:30PM
-const time3 = Math.floor((currentTime + 3 * 60 * 60 * 1000) / 1000); //2nd stretch 2:30PM
-const time4 = Math.floor((currentTime + 5 * 60 * 60 * 1000) / 1000); //3rd stretch 4PM
-const time5 = Math.floor((currentTime + 6.5 * 60 * 60 * 1000) / 1000); //eod 6PM
+const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000); //welcome  9:00AM
+const time2 = Math.floor((currentTime + 3 * 60 * 60 * 1000) / 1000); //1st stretch 12:00PM
+const time3 = Math.floor((currentTime + 5 * 60 * 60 * 1000) / 1000); //2nd stretch 14:00PM
+const time4 = Math.floor((currentTime + 7 * 60 * 60 * 1000) / 1000); //3rd stretch 16:00PM
+const time5 = Math.floor((currentTime + 9 * 60 * 60 * 1000) / 1000); //eod 18:00PM
 
 const user_vera = new User("vera", "testuser1", user_imglist.vera);
 const user_zoya = new User("zoya", "testuser2", user_imglist.zoya);
@@ -38,7 +38,8 @@ const user_b = new User("userb", "testuser7", user_imglist.meeku);
 const user_c = new User("userc", "testuser8", user_imglist.meeku);
 const user_d = new User("userd", "testuser9", user_imglist.meeku);
 const user_e = new User("usere", "testuser10a", user_imglist.meeku);
-const user_f = new User("userf", "testuser11", user_imglist.meeku);
+const user_f = new User("userf", "testuser11", user_imglist.meeku); //Control channel
+const user_g = new User("userg", "testuser12", user_imglist.meeku);
 
 const user_group = [
   user_vera,
@@ -52,6 +53,7 @@ const user_group = [
   user_d,
   user_e,
   user_f,
+  user_g,
 ];
 
 //const user_group = [user_f];
@@ -97,7 +99,7 @@ for (var i = 0; i < user_group.length; i++) {
     token: process.env.SLACK_BOT_TOKEN,
     channel: user.channel,
     text: "",
-    blocks: user.gen_stretch(),
+    blocks: user.gen_stretch1(),
     post_at: time2,
   });
 
@@ -105,7 +107,7 @@ for (var i = 0; i < user_group.length; i++) {
     token: process.env.SLACK_BOT_TOKEN,
     channel: user.channel,
     text: "",
-    blocks: user.gen_stretch(),
+    blocks: user.gen_stretch2(),
     post_at: time3,
   });
 
@@ -113,7 +115,7 @@ for (var i = 0; i < user_group.length; i++) {
     token: process.env.SLACK_BOT_TOKEN,
     channel: user.channel,
     text: "",
-    blocks: user.gen_stretch(),
+    blocks: user.gen_stretch3(),
     post_at: time4,
   });
 
@@ -311,5 +313,22 @@ app.action("button_snoozeuserf", async ({ action, ack }) => {
 app.action("button_skipuserf", async ({ action, ack }) => {
   await ack();
   await respond_msg(user_f, "button_skip");
+});
+
+//userg
+app.action("button_completeuserg", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_g, "button_complete");
+});
+
+app.action("button_snoozeuserg", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_g, "button_snooze");
+});
+
+//Add +1 to time skipped here
+app.action("button_skipuserg", async ({ action, ack }) => {
+  await ack();
+  await respond_msg(user_g, "button_skip");
 });
 //Bot can automatically join public channels, but we need to manually invite it to a private channel
