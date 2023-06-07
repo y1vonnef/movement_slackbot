@@ -1,21 +1,48 @@
-import pkg from "@slack/bolt";
-//import dotenv from "dotenv";
+import dotenv from "dotenv";
 import { User, user_imglist } from "./messages.js";
-const { App } = pkg;
+import pkg from "@slack/bolt";
+const { App, HTTPReceiver } = pkg;
 
-//dotenv.config();
+dotenv.config();
 
 const app = new App({
-  token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET,
-  unhandledRequestHandler: async ({ logger, response }) => {
-    logger.info(
-      "Acknowledging this incoming request because 2 seconds already passed..."
-    );
-    // acknowledge it anyway!
-    response.writeHead(200);
-    response.end();
-  },
+  receiver: new HTTPReceiver({
+    token: process.env.SLACK_BOT_TOKEN,
+    signingSecret: process.env.SLACK_SIGNING_SECRET,
+    clientId: process.env.SLACK_CLIENT_ID,
+    clientSecret: process.env.SLACK_CLIENT_SECRET,
+    stateSecret: "my-secret",
+    scopes: [
+      "channels:join",
+      "channels:read",
+      "chat:write",
+      "chat:write.customize",
+      "chat:write.public",
+      "incoming-webhook",
+    ],
+    unhandledRequestHandler: async ({ logger, response }) => {
+      logger.info(
+        "Acknowledging this incoming request because 2 seconds already passed..."
+      );
+      // acknowledge it anyway!
+      response.writeHead(200);
+      response.end();
+    },
+    dispatchErrorHandler: async ({ error, logger, response }) => {
+      logger.error(`dispatch error: ${error}`);
+      response.writeHead(404);
+      response.write("Something is wrong!");
+      response.end();
+    },
+    processEventErrorHandler: async ({ error, logger, response }) => {
+      logger.error(`processEvent error: ${error}`);
+      // acknowledge it anyway!
+      response.writeHead(200);
+      response.end();
+      return true;
+    },
+    unhandledRequestTimeoutMillis: 2000, // the default is 3001
+  }),
 });
 
 //Bolt uses express js under the hood
