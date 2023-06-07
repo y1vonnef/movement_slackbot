@@ -52,16 +52,19 @@ const app = new App({
 })();
 
 const currentTime = new Date().getTime();
-// const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000);
-// const time2 = Math.floor((currentTime + 1 * 60 * 1000) / 1000);
-// const time3 = Math.floor((currentTime + 1.5 * 60 * 1000) / 1000);
-// const time4 = Math.floor((currentTime + 2 * 60 * 1000) / 1000);
-// const time5 = Math.floor((currentTime + 2.5 * 60 * 1000) / 1000);
-const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000); //welcome  9:00AM
-const time2 = Math.floor((currentTime + 3 * 60 * 60 * 1000) / 1000); //1st stretch 12:00PM
-const time3 = Math.floor((currentTime + 5 * 60 * 60 * 1000) / 1000); //2nd stretch 14:00PM
-const time4 = Math.floor((currentTime + 7 * 60 * 60 * 1000) / 1000); //3rd stretch 16:00PM
-const time5 = Math.floor((currentTime + 9 * 60 * 60 * 1000) / 1000); //eod 18:00PM
+//Test
+const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000);
+const time2 = Math.floor((currentTime + 1 * 60 * 1000) / 1000);
+const time3 = Math.floor((currentTime + 1.5 * 60 * 1000) / 1000);
+const time4 = Math.floor((currentTime + 2 * 60 * 1000) / 1000);
+const time5 = Math.floor((currentTime + 2.5 * 60 * 1000) / 1000);
+
+//Actual
+// const time1 = Math.floor((currentTime + 0.5 * 60 * 1000) / 1000); //welcome  9:00AM
+// const time2 = Math.floor((currentTime + 3 * 60 * 60 * 1000) / 1000); //1st stretch 12:00PM
+// const time3 = Math.floor((currentTime + 5 * 60 * 60 * 1000) / 1000); //2nd stretch 14:00PM
+// const time4 = Math.floor((currentTime + 7 * 60 * 60 * 1000) / 1000); //3rd stretch 16:00PM
+// const time5 = Math.floor((currentTime + 9 * 60 * 60 * 1000) / 1000); //eod 18:00PM
 
 const user_vera = new User("vera", "testuser1", user_imglist.vera);
 const user_zoya = new User("zoya", "testuser2", user_imglist.zoya);
@@ -120,48 +123,48 @@ async function respond_msg(user, id) {
 
 //Where we send messages!
 //TODO: change welcome to morning after the first day
-// for (var i = 0; i < user_group.length; i++) {
-//   var user = user_group[i];
-//   await app.client.chat.scheduleMessage({
-//     token: process.env.SLACK_BOT_TOKEN,
-//     channel: user.channel,
-//     text: "",
-//     blocks: user.gen_welcome(),
-//     post_at: time1,
-//   });
+for (var i = 0; i < user_group.length; i++) {
+  var user = user_group[i];
+  await app.client.chat.scheduleMessage({
+    token: process.env.SLACK_BOT_TOKEN,
+    channel: user.channel,
+    text: "",
+    blocks: user.gen_welcome(),
+    post_at: time1,
+  });
 
-//   await app.client.chat.scheduleMessage({
-//     token: process.env.SLACK_BOT_TOKEN,
-//     channel: user.channel,
-//     text: "",
-//     blocks: user.gen_stretch1(),
-//     post_at: time2,
-//   });
+  await app.client.chat.scheduleMessage({
+    token: process.env.SLACK_BOT_TOKEN,
+    channel: user.channel,
+    text: "",
+    blocks: user.gen_stretch1(),
+    post_at: time2,
+  });
 
-//   await app.client.chat.scheduleMessage({
-//     token: process.env.SLACK_BOT_TOKEN,
-//     channel: user.channel,
-//     text: "",
-//     blocks: user.gen_stretch2(),
-//     post_at: time3,
-//   });
+  await app.client.chat.scheduleMessage({
+    token: process.env.SLACK_BOT_TOKEN,
+    channel: user.channel,
+    text: "",
+    blocks: user.gen_stretch2(),
+    post_at: time3,
+  });
 
-//   await app.client.chat.scheduleMessage({
-//     token: process.env.SLACK_BOT_TOKEN,
-//     channel: user.channel,
-//     text: "",
-//     blocks: user.gen_stretch3(),
-//     post_at: time4,
-//   });
+  await app.client.chat.scheduleMessage({
+    token: process.env.SLACK_BOT_TOKEN,
+    channel: user.channel,
+    text: "",
+    blocks: user.gen_stretch3(),
+    post_at: time4,
+  });
 
-//   await app.client.chat.scheduleMessage({
-//     token: process.env.SLACK_BOT_TOKEN,
-//     channel: user.channel,
-//     text: "",
-//     blocks: user.gen_eod(),
-//     post_at: time5,
-//   });
-// }
+  await app.client.chat.scheduleMessage({
+    token: process.env.SLACK_BOT_TOKEN,
+    channel: user.channel,
+    text: "",
+    blocks: user.gen_eod(),
+    post_at: time5,
+  });
+}
 
 //Vera
 app.action("button_completevera", async ({ action, ack }) => {
