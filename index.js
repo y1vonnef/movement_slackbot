@@ -8,6 +8,14 @@ const { App } = pkg;
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
+  unhandledRequestHandler: async ({ logger, response }) => {
+    logger.info(
+      "Acknowledging this incoming request because 2 seconds already passed..."
+    );
+    // acknowledge it anyway!
+    response.writeHead(200);
+    response.end();
+  },
 });
 
 //Bolt uses express js under the hood
