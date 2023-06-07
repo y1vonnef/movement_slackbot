@@ -83,50 +83,50 @@ async function respond_msg(user, id) {
   });
 }
 
-//add alt text for text
+//Where we send messages!
 //TODO: change welcome to morning after the first day
-for (var i = 0; i < user_group.length; i++) {
-  var user = user_group[i];
-  await app.client.chat.scheduleMessage({
-    token: process.env.SLACK_BOT_TOKEN,
-    channel: user.channel,
-    text: "",
-    blocks: user.gen_welcome(),
-    post_at: time1,
-  });
+// for (var i = 0; i < user_group.length; i++) {
+//   var user = user_group[i];
+//   await app.client.chat.scheduleMessage({
+//     token: process.env.SLACK_BOT_TOKEN,
+//     channel: user.channel,
+//     text: "",
+//     blocks: user.gen_welcome(),
+//     post_at: time1,
+//   });
 
-  await app.client.chat.scheduleMessage({
-    token: process.env.SLACK_BOT_TOKEN,
-    channel: user.channel,
-    text: "",
-    blocks: user.gen_stretch1(),
-    post_at: time2,
-  });
+//   await app.client.chat.scheduleMessage({
+//     token: process.env.SLACK_BOT_TOKEN,
+//     channel: user.channel,
+//     text: "",
+//     blocks: user.gen_stretch1(),
+//     post_at: time2,
+//   });
 
-  await app.client.chat.scheduleMessage({
-    token: process.env.SLACK_BOT_TOKEN,
-    channel: user.channel,
-    text: "",
-    blocks: user.gen_stretch2(),
-    post_at: time3,
-  });
+//   await app.client.chat.scheduleMessage({
+//     token: process.env.SLACK_BOT_TOKEN,
+//     channel: user.channel,
+//     text: "",
+//     blocks: user.gen_stretch2(),
+//     post_at: time3,
+//   });
 
-  await app.client.chat.scheduleMessage({
-    token: process.env.SLACK_BOT_TOKEN,
-    channel: user.channel,
-    text: "",
-    blocks: user.gen_stretch3(),
-    post_at: time4,
-  });
+//   await app.client.chat.scheduleMessage({
+//     token: process.env.SLACK_BOT_TOKEN,
+//     channel: user.channel,
+//     text: "",
+//     blocks: user.gen_stretch3(),
+//     post_at: time4,
+//   });
 
-  await app.client.chat.scheduleMessage({
-    token: process.env.SLACK_BOT_TOKEN,
-    channel: user.channel,
-    text: "",
-    blocks: user.gen_eod(),
-    post_at: time5,
-  });
-}
+//   await app.client.chat.scheduleMessage({
+//     token: process.env.SLACK_BOT_TOKEN,
+//     channel: user.channel,
+//     text: "",
+//     blocks: user.gen_eod(),
+//     post_at: time5,
+//   });
+// }
 
 //Vera
 app.action("button_completevera", async ({ action, ack }) => {
