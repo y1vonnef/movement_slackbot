@@ -1,9 +1,9 @@
 import pkg from "@slack/bolt";
-import dotenv from "dotenv";
+//import dotenv from "dotenv";
 import { User, user_imglist } from "./messages.js";
 const { App } = pkg;
 
-dotenv.config();
+//dotenv.config();
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
